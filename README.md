@@ -3,7 +3,8 @@
 ## About
 
 This project turns a typical handset (Baofeng UV-5R or similar) into a base station that receives
-[DTMF](https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling) commands and 
+[DTMF](https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling) commands and responses with information
+sent over the radio via text-to-speech.
 
 ## Prerequistes for Ubuntu
 ```
