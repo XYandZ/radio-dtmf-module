@@ -46,7 +46,7 @@ class DTMFDecocder:
             frame = frombuffer(self.stream.read(self.chunk, exception_on_overflow = False), dtype=int16)
             current = self.__dtmf_decode(frame, self.fs)
 
-            print(current, last)
+            logging.debug(current, last)
 
             if last != current:
                 last = current

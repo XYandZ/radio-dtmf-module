@@ -1,5 +1,5 @@
 from pyaudio import PyAudio, paInt16
-
+import logging
 
 def audio_config():
 
@@ -13,7 +13,7 @@ def audio_config():
         return list(filter( lambda x  : x.get('maxInputChannels') > 0, all_devices))
 
     input_device = get_input_devices()[0]
-    print( input_device )
+    logging.debug( "ALSA Input Device Selected: " + input_device )
     input_device_index = input_device.get('index')
     input_device_sample_rate = int(input_device.get('defaultSampleRate'))
 

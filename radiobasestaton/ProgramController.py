@@ -73,8 +73,6 @@ class ProgramController():
             else:
                 seq = seq + x
 
-            print(x, seq)
-
             if seq in self.modules.keys():
                 speak_with_delay(self.__get_info_from_dtmf_code(seq))
                 seq = ""
