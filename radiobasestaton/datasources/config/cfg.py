@@ -1,3 +1,4 @@
+import logging
 from configparser import ConfigParser
 from os import path
 
@@ -19,6 +20,7 @@ def config(section='services', filename=None):
         params = parser.items(section)
         for param in params:
             cfg[param[0]] = param[1]
+        logging.debug(cfg)
     else:
         raise FileNotFoundError('Section {0} not found in the {1} file'.format(section, filename))
 
