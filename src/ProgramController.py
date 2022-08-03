@@ -3,10 +3,10 @@ from functools import reduce
 from time import sleep
 from pyttsx3 import speak
 
-from .audio import DTMFDecocder
-from .datasources import *
-from .datasources.config import config
-from .datasources.SourceTypes import SourceType
+from src.audio import DTMFDecocder
+from src.datasources import *
+from src.datasources.config import config
+from src.datasources.SourceTypes import SourceType
 
 
 class ProgramController():

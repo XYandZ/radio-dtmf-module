@@ -1,8 +1,8 @@
 from datetime import date
 import logging
 
-from radiobasestaton.datasources.DataSource import DataSource
-from radiobasestaton.datasources.SourceTypes import SourceType
+from src.datasources.DataSource import DataSource
+from src.datasources.SourceTypes import SourceType
 
 
 class DateSource(DataSource):
