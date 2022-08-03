@@ -28,8 +28,15 @@ You can enable VOX On the UV-5R using the following steps.
 * Use arrow keys to set `VOX` to `3`
 * `MENU` again save the setting
 
-## Run Program 
+## Start Program Manually
+Install python packages via
+
+```shell
+$ pip install -r requirements.txt
 ```
+
+And start the program
+```shell
 $ python main.py
 ```
 
@@ -41,3 +48,18 @@ $ python main.py
 | 86 (TM) | Get the current time in 12 hour format            |
 | 99 (WX) | Get the current weather (temperature, wind speed) |
 | #       | List commands                                     |
+
+## System Configuration
+
+### ALSA
+
+```shell
+# /etc/asound.conf
+
+defaults.pcm.!card 1
+defaults.ctl.!card 1
+```
+
+### Systemd Service
+
+### Environment Variables
