@@ -7,8 +7,9 @@ This project turns a typical handset (Baofeng UV-5R or similar) into a base stat
 sent over the radio via text-to-speech.
 
 ## Prerequistes for Ubuntu
-```
-$ sudo apt update && sudo apt install espeak ffmpeg libespeak1 portaudio19-dev
+```shell
+sudo apt update
+sudo apt install espeak ffmpeg libespeak1 portaudio19-dev
 ```
 
 ## Hardware
@@ -29,15 +30,18 @@ You can enable VOX On the UV-5R using the following steps.
 * `MENU` again save the setting
 
 ## Start Program Manually
-Install python packages via
 
+The DTMF module is primarily designed to be run as a systemd service on an embedded system.
+However, it can be run as a standalone python project for testing and debug purposes.
+
+From the project root directory run:
 ```shell
-$ pip install -r requirements.txt
+$ pip install .
 ```
 
 And start the program
 ```shell
-$ python main.py
+$ python -m radiodtmf
 ```
 
 ## DTMF Commands
