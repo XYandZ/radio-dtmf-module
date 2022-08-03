@@ -66,4 +66,16 @@ defaults.ctl.!card 1
 
 ### Systemd Service
 
+From the project root directory run:
+
+```shell
+sudo install -o root -g root -m 644 \
+    ./system/systemd/radiodtmf.service/radiodtmf.service \
+    /etc/systemd/system/radiodtmf.service
+
+systemd-analyze verify radiodtmf.service
+
+sudo systemctl enable radiodtmf
+```
+
 ### Environment Variables
