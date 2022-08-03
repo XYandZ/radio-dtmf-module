@@ -1,12 +1,13 @@
 import logging
 import sys
 import traceback
+from os import environ
 
 import pyowm
 
-from radiobasestaton.datasources.DataSource import DataSource
-from radiobasestaton.datasources.SourceTypes import SourceType
-from radiobasestaton.datasources.config import config
+from src.datasources.DataSource import DataSource
+from src.datasources.SourceTypes import SourceType
+from src.datasources.config import config
 
 
 class WeatherSource(DataSource):
@@ -14,10 +15,13 @@ class WeatherSource(DataSource):
     def __init__(self, code):
         self.code = code
 
-        cfg = config("owm")
+        # cfg = config("owm")
+        #
+        # self.apiKey = cfg["api_key"]
+        # self.location = cfg["city"]
 
-        self.apiKey = cfg["api_key"]
-        self.location = cfg["city"]
+        self.apiKey = environ.get('OWM_API_KEY', '')
+        self.location = environ.get('OWM_CITY', '')
 
     def assigned_code(self):
         return self.code
