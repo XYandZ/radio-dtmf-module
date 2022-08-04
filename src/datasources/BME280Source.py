@@ -9,7 +9,7 @@ from src.datasources.DataSource import DataSource
 from src.datasources.SourceTypes import SourceType
 
 
-class WeatherSource(DataSource):
+class BME280Source(DataSource):
 
     def __init__(self, code):
         self.code = code
@@ -25,7 +25,7 @@ class WeatherSource(DataSource):
 
     @staticmethod
     def source_type():
-        return SourceType.weather
+        return SourceType.bme280
 
     def get_data(self):
         bme280_sample = bme280.sample(self.__ic2_bus, self.__ic2_address, self.__bme280_calibration_params)
