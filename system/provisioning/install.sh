@@ -25,3 +25,4 @@ systemd-analyze verify radiodtmf.service
 
 sudo systemctl reset-failed
 sudo systemctl enable radiodtmf
+sudo systemctl start radiodtmf
