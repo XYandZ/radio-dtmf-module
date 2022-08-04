@@ -1,0 +1,34 @@
+#Python Output
+*.egg-info
+build
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Git Files
+.gitignore
+.git
+
+# General Project Files
+README.md
+
+# IDEA files
+*.iml
+
+# Docker
+Dockerfile
