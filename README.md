@@ -55,8 +55,21 @@ $ python -m radiodtmf
 
 ## System Configuration
 
-### ALSA
+### Local Installation
 
+Copy `system/provisioning/install.sh` to the device that will be connected to the radio and run it.
+Note this install, enable, and start a systemd service immediately. Ensure that all system configuration is handled
+before running this script.
+
+### ALSA Configuration
+
+List ALSA devices and identify a device capable of audio input and output.
+```shell
+aplay -l
+```
+
+Identify the **card** number of the audio device you plan to use. Create a file in `/etc/asound.conf` that sets this
+card to the default for ALSA pcm and ctl.
 ```shell
 # /etc/asound.conf
 
@@ -64,18 +77,15 @@ defaults.pcm.!card 1
 defaults.ctl.!card 1
 ```
 
-### Systemd Service
-
-From the project root directory run:
-
-```shell
-sudo install -o root -g root -m 644 \
-    ./system/systemd/radiodtmf.service/radiodtmf.service \
-    /etc/systemd/system/radiodtmf.service
-
-systemd-analyze verify radiodtmf.service
-
-sudo systemctl enable radiodtmf
-```
-
 ### Environment Variables
+
+Note these variables are usually set with an `/etc/default` file by the install script but they can be set
+manually for testing or alternate methods of installation.
+
+| Variable           | Service | Description                             | Default |
+|--------------------|---------|-----------------------------------------|---------|
+| OWM_API_KEY        | OWM     | Open Weather Maps API Key.              | None    |
+| OWM_CITY           | OWM     | Open Weather Maps City.                 | None    |
+| ALSA_DEVICE        | Audio   | ALSA Device for audio input and output. | 0       |
+| BME280_IC2_PORT    | BME280  | BME280 IC2 Port.                        | 1       |
+| BME280_IC2_ADDRESS | BME280  | BME280 IC2 Address.                     | 0x76    |
