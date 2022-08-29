@@ -11,9 +11,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -y && \
 
 COPY ./ /tmp/radiodtmf/
 
-RUN pushd /tmp/radiodtmf && \
-    python -m pip install . && \
-    popd
+WORKDIR /tmp/radiodtmf/
+
+RUN pip install --no-cache-dir ./
+
+RUN /usr/local/bin/python -m radiodtmf --version
 
 RUN install -o root -g root -m 600 \
     /tmp/radiodtmf/system/default/radiodtmf \
