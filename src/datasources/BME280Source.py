@@ -35,7 +35,13 @@ class BME280Source(DataSource):
         rh = bme280_sample.pressure
         humidity = bme280_sample.humidity
 
-        report = f"Current Weather: Air temperature, {temp_f} Farenheit. Barometric pressure {rh} HPA. Humidity, {humidity} % rH."
+        # Round all floats to one decimal place so the TTS doesn't take forever to read things out
+        temp_f_str = "{:.1f}".format(temp_f)
+        rh_str = "{:.1f}".format(rh)
+        humidity_str = "{:.1f}".format(humidity)
+
+        report = f"Current Weather: Air temperature, {temp_f_str} Farenheit. Barometric pressure {rh_str} HPA. " \
+                 f"Humidity, {humidity_str} % rH. "
         logging.info("Weather: " + report)
 
         return report
