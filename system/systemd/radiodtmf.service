@@ -4,7 +4,7 @@ After=network.target
 StartLimitIntervalSec=0
 
 [Service]
-ExecStart=/usr/local/bin/python -m radiodtmf
+ExecStart=/usr/bin/python -m radiodtmf
 EnvironmentFile=/etc/default/radiodtmf
 SyslogIdentifier=radiodtmf
 Restart=on-failure
