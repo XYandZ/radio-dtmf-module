@@ -16,7 +16,7 @@ class BME280Source(DataSource):
 
         self.__ic2_port = int(environ.get('BME280_IC2_PORT', '1'))
         self.__ic2_bus = smbus2.SMBus(self.__ic2_port)
-        self.__ic2_address = environ.get('BME280_IC2_ADDRESS', '0x76')
+        self.__ic2_address = int(environ.get('BME280_IC2_ADDRESS', '0x76'), 0)
 
         self.__bme280_calibration_params = bme280.load_calibration_params(self.__ic2_bus, self.__ic2_address)
 
