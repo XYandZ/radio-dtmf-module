@@ -1,8 +1,8 @@
 from datetime import datetime
 import logging
 
-from src.datasources.DataSource import DataSource
-from src.datasources.SourceTypes import SourceType
+from radiodtmf.datasources.DataSource import DataSource
+from radiodtmf.datasources.SourceTypes import SourceType
 
 
 class TimeSource(DataSource):

@@ -5,8 +5,8 @@ from os import environ
 import smbus2
 import bme280
 
-from src.datasources.DataSource import DataSource
-from src.datasources.SourceTypes import SourceType
+from radiodtmf.datasources.DataSource import DataSource
+from radiodtmf.datasources.SourceTypes import SourceType
 
 
 class BME280Source(DataSource):

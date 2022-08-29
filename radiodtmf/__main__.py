@@ -1,6 +1,6 @@
 import argparse
 import logging
-from src.ProgramController import ProgramController
+from radiodtmf.ProgramController import ProgramController
 
 VERSION = "0.1.0"
 
@@ -19,27 +19,27 @@ if __name__ == "__main__":
         | BME280_IC2_ADDRESS | BME280  | BME280 IC2 Address.                     | 0x76    | \
         "
     )
+
     parser.add_argument(
-        '--version',
-        help="Print the program version number.",
-        action='version',
+        "--version",
+        help="Print the program version number and exit.",
+        action="version",
         version=f'Radio DTMF Version: {VERSION}'
     )
 
     parser.add_argument(
-        '-d', '--debug',
+        "-d", "--debug",
         help="Print debug information.",
         action="store_const", dest="loglevel", const=logging.DEBUG,
         default=logging.WARNING,
     )
 
     parser.add_argument(
-        '-v', '--verbose',
+        "-v", "--verbose",
         help="Verbose output.",
         action="store_const", dest="loglevel", const=logging.INFO,
     )
 
-    parser = argparse.ArgumentParser()
     args = parser.parse_args()
     logging.basicConfig(level=args.loglevel)
 

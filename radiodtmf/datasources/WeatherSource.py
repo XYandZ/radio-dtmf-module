@@ -5,9 +5,9 @@ from os import environ
 
 import pyowm
 
-from src.datasources.DataSource import DataSource
-from src.datasources.SourceTypes import SourceType
-from src.datasources.config import config
+from radiodtmf.datasources.DataSource import DataSource
+from radiodtmf.datasources.SourceTypes import SourceType
+from radiodtmf.datasources.config import config
 
 
 class WeatherSource(DataSource):

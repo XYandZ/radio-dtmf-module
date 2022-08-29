@@ -3,7 +3,7 @@ from scipy.signal import find_peaks
 from numpy import average, absolute, fft, frombuffer, int16
 import logging
 
-from src.audio.config import audio_config
+from radiodtmf.audio.config import audio_config
 
 
 class DTMFDecocder:
