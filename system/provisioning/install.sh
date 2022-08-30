@@ -1,17 +1,17 @@
 #!/bin/bash
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get update -y && \
-    apt-get install -y \
+    sudo apt-get install -y \
     build-essential \
     espeak \
     ffmpeg \
     libespeak1 \
     portaudio19-dev
 
-pip install --no-cache-dir ../../
+sudo pip install --no-cache-dir ../../
 
 # Sanity check to see if program sort of works
-/usr/bin/python -m radiodtmf --version
+sudo /usr/bin/python -m radiodtmf --version
 
 sudo install -o root -g root -m 600 \
     ../default/radiodtmf \
