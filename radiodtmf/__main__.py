@@ -5,20 +5,18 @@ from radiodtmf.ProgramController import ProgramController
 VERSION = "0.1.0"
 
 if __name__ == "__main__":
-
     parser = argparse.ArgumentParser(
         description="""
         Listen for DTMF commands and respond with information via text to speech.
         
         Environmental Variables:
         
-        | Variable           | Service | Description                             | Default |
-        |--------------------|---------|-----------------------------------------|---------|
-        | OWM_API_KEY        | OWM     | Open Weather Maps API Key.              | None    |
-        | OWM_CITY           | OWM     | Open Weather Maps City.                 | None    |
-        | ALSA_DEVICE        | Audio   | ALSA Device for audio input and output. | 0       |
-        | BME280_IC2_PORT    | BME280  | BME280 IC2 Port.                        | 1       |
-        | BME280_IC2_ADDRESS | BME280  | BME280 IC2 Address.                     | 0x76    |
+        | Variable           | Service | Description                             | Default      |
+        |--------------------|---------|-----------------------------------------|--------------|
+        | ALSA_DEVICE        | Audio   | ALSA Device for audio input and output. | 0            |
+        | BME280_IC2_PORT    | BME280  | BME280 IC2 Port.                        | 1            |
+        | BME280_IC2_ADDRESS | BME280  | BME280 IC2 Address.                     | 0x76         |
+        | SDS011_DEV         | SDS011  | SDS011 dev file                         | /dev/ttyUSB0 |
         """
     )
 

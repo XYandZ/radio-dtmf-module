@@ -46,12 +46,15 @@ $ python -m radiodtmf
 
 ## DTMF Commands
 
-| Command | Result                                            |
-|---------|---------------------------------------------------|
-| 38 (DT) | Get the current date and day of the week          |
-| 86 (TM) | Get the current time in 12 hour format            |
-| 99 (WX) | Get the current weather (temperature, wind speed) |
-| #       | List commands                                     |
+Default / Recommended DTMF Commands
+
+| Command | Result                                                                        |
+|---------|-------------------------------------------------------------------------------|
+| 38 (DT) | Get the current date and day of the week                                      |
+| 86 (TM) | Get the current time in 12 hour format                                        |
+| 27 (AQ) | Get estimate of Air Quality Index (AQI) using EPA format                      |
+| 99 (WX) | Get the current weather (temperature, barometric pressure, relative humidity) |
+| #       | List commands                                                                 |
 
 ## System Configuration
 
@@ -181,5 +184,3 @@ manually for testing or alternate methods of installation.
 | BME280_IC2_PORT    | BME280  | BME280 IC2 Port.                        | 1            |
 | BME280_IC2_ADDRESS | BME280  | BME280 IC2 Address.                     | 0x76         |
 | SDS011_DEV         | SDS011  | SDS011 dev file                         | /dev/ttyUSB0 |
-| OWM_API_KEY        | OWM     | Open Weather Maps API Key.              | None         |
-| OWM_CITY           | OWM     | Open Weather Maps City.                 | None         |
