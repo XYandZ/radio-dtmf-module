@@ -175,10 +175,11 @@ before running this script.
 Note these variables are usually set with an `/etc/default` file by the install script but they can be set
 manually for testing or alternate methods of installation.
 
-| Variable           | Service | Description                             | Default |
-|--------------------|---------|-----------------------------------------|---------|
-| OWM_API_KEY        | OWM     | Open Weather Maps API Key.              | None    |
-| OWM_CITY           | OWM     | Open Weather Maps City.                 | None    |
-| ALSA_DEVICE        | Audio   | ALSA Device for audio input and output. | 0       |
-| BME280_IC2_PORT    | BME280  | BME280 IC2 Port.                        | 1       |
-| BME280_IC2_ADDRESS | BME280  | BME280 IC2 Address.                     | 0x76    |
+| Variable           | Service | Description                             | Default      |
+|--------------------|---------|-----------------------------------------|--------------|
+| ALSA_DEVICE        | Audio   | ALSA Device for audio input and output. | 0            |
+| BME280_IC2_PORT    | BME280  | BME280 IC2 Port.                        | 1            |
+| BME280_IC2_ADDRESS | BME280  | BME280 IC2 Address.                     | 0x76         |
+| SDS011_DEV         | SDS011  | SDS011 dev file                         | /dev/ttyUSB0 |
+| OWM_API_KEY        | OWM     | Open Weather Maps API Key.              | None         |
+| OWM_CITY           | OWM     | Open Weather Maps City.                 | None         |
