@@ -7,7 +7,7 @@ from radiodtmf.datasources.DataSource import DataSource
 from radiodtmf.datasources.SourceTypes import SourceType
 
 
-class BME280Source(DataSource):
+class SDS011Source(DataSource):
 
     def __init__(self, code):
         self.code = code
@@ -21,7 +21,7 @@ class BME280Source(DataSource):
 
     @staticmethod
     def source_type():
-        return SourceType.bme280
+        return SourceType.sds011
 
     def get_data(self):
         sample = self.__sds.read_measurement()
