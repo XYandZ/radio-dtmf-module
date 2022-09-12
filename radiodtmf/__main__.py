@@ -2,7 +2,7 @@ import argparse
 import logging
 from radiodtmf.ProgramController import ProgramController
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
