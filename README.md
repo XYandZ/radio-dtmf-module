@@ -15,7 +15,9 @@ sudo apt install espeak ffmpeg libespeak1 portaudio19-dev
 ## Hardware
 
 * [UV-5R](https://www.amazon.com/dp/B007H4VT7A/) (any handset with Kenwood microphone jack should work)
-* [APRS Cable](https://www.amazon.com/BTECH-APRS-K1-Interface-APRSDroid-Compatible/dp/B01LMIBAZW)
+* [APRS Cable](https://www.amazon.com/dp/B01LMIBAZW)
+* [BME280](https://www.amazon.com/dp/B013W1AJUY/)
+* [SDS011](https://www.amazon.com/dp/B08QRJSVW7)
 
 ## Radio Setup
 
